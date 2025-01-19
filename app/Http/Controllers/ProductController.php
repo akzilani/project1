@@ -43,6 +43,25 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $product = new Product();
+
+            $product->name        = $request->name;
+            $product->content     = $request->content;
+            $product->qty         = $request->qty;
+            // $product->created_at  = $request->created_at;
+            // $product->updated_at  = $request->updated_at;
+
+
+            // $customer->remarks         = $request->remarks;
+            // $customer->status          = $request->status;
+            // $customer->created_by = $request->created_by;
+            // $customer->updated_by = $request->updated_by;
+            // $customer->created_at      = $request->created_at;
+            // $customer->updated_at      = $request->updated_at;
+            // $customer->deleted_by      = $request->deleted_by;
+            // $customer->deleted_date    = $request->deleted_date;
+
+            $product->save();
 
     }
 
